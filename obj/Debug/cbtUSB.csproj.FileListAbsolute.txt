@@ -1,0 +1,11 @@
+F:\Source\cbtUSB\obj\Debug\cbtUSB.csprojAssemblyReference.cache
+F:\Source\cbtUSB\obj\Debug\cbtUSB.csproj.CoreCompileInputs.cache
+F:\Source\cbtUSB\bin\Debug\cbtUSB.exe.config
+F:\Source\cbtUSB\bin\Debug\cbtUSB.exe
+F:\Source\cbtUSB\bin\Debug\cbtUSB.pdb
+F:\Source\cbtUSB\bin\Debug\MySql.Data.dll
+F:\Source\cbtUSB\bin\Debug\Newtonsoft.Json.dll
+F:\Source\cbtUSB\bin\Debug\Newtonsoft.Json.xml
+F:\Source\cbtUSB\obj\Debug\cbtUSB.csproj.CopyComplete
+F:\Source\cbtUSB\obj\Debug\cbtUSB.exe
+F:\Source\cbtUSB\obj\Debug\cbtUSB.pdb

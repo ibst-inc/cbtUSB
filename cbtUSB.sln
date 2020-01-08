@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cbtUSB", "cbtUSB.csproj", "{633A49CF-AB5F-4F28-9229-C0D8EAEF4182}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{633A49CF-AB5F-4F28-9229-C0D8EAEF4182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{633A49CF-AB5F-4F28-9229-C0D8EAEF4182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{633A49CF-AB5F-4F28-9229-C0D8EAEF4182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{633A49CF-AB5F-4F28-9229-C0D8EAEF4182}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9165A8F-ACDE-4CCC-A364-CDA9B90C4CD4}
+	EndGlobalSection
+EndGlobal
