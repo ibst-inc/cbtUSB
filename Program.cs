@@ -178,10 +178,12 @@ namespace cbtUSB
             {
                 string text = System.IO.File.ReadAllText(USBDRV + "export.json");
                 string text2 = System.IO.File.ReadAllText(USBDRV + "export_header.json");
+                string text3 = System.IO.File.ReadAllText(USBDRV + "export_result.json");
                 //connsql = new SqlConnection(strConn);
                 int msei_id;
                 DataTable dt = JsonConvert.DeserializeObject<DataTable>(text);
                 DataTable dt2 = JsonConvert.DeserializeObject<DataTable>(text2);
+                DataTable dt3 = JsonConvert.DeserializeObject<DataTable>(text3);
                 //String Qstr= DBHelper.BulkInsert(ref dt, "sr_evaluate_tool_item");
                 ar = new AppSettingsReader();
                 sbtdir = (String)ar.GetValue("sbtdir", typeof(String)) + "\\mv31\\toolbox\\data\\";
@@ -596,6 +598,44 @@ namespace cbtUSB
                         }
                     }
 
+                }
+                int first = 1;
+                foreach (DataRow r in dt3.Rows)
+                {
+                    int rows;
+                    String sei_id;
+
+                        MySqlCommand scom = new MySqlCommand();
+                        scom.Connection = conn;
+                        if (first == 1)
+                        {
+                            // 첫 결과데이터 import 전에 해당 수업 결과데이터 삭제 
+                            scom.CommandText = String.Format("DELETE FROM `toolbox`.`sr_evaluate_tool_item_result` where sei_id ={0} ", r["sei_id"].ToString());
+                            rows = scom.ExecuteNonQuery();
+                            first = 0;
+                        }
+                        scom.CommandText = String.Format(@"INSERT INTO `toolbox`.`sr_evaluate_tool_item_result`
+                                        (
+                                        `tid`,
+                                        `sei_id`,
+                                        `set_id`,
+                                        `mb_id`,
+                                        `result`,
+                                        `sti_answer`,
+                                        `datetime`)
+                                        VALUES
+                                        (
+                                        <{0}>,
+                                        <{1}>,
+                                        <{2}>,
+                                        <{3}>,
+                                        <{4}>,
+                                        <{5}>,
+                                        <{6}>)",
+                                            r["tid"].ToString(), r["sei_id"].ToString(), r["set_id"].ToString(), r["mb_id"].ToString(),
+                                            r["result"].ToString(), r["sti_answer"].ToString(), r["datetime"].ToString());
+                        rows = scom.ExecuteNonQuery();
+                    
                 }
             }
             return 0;

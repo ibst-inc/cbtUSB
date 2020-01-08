@@ -7,7 +7,7 @@
     <ProjectGuid>{633A49CF-AB5F-4F28-9229-C0D8EAEF4182}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>cbtUSB</RootNamespace>
-    <AssemblyName>cbtUSB</AssemblyName>
+    <AssemblyName>getUSB</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
